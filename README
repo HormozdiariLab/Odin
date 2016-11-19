@@ -1,0 +1,13 @@
+##Installation
+
+make -f make_Odin_FindSphere
+and
+g++ -o classification_Odin classification_Odin.cpp
+
+
+##Command to find sphere 
+
+findSphereClusters10_Odin Converted_Varinant_Matrix #Number_of_genes #Number_of_Samples Samples_Name_Case_Control Samples_to_filter Output_Sphere
+
+##Command to make prediction 
+classificationTest_Odin Converted_Varinant_Matrix 21937 929  Output_Sphere Samples_Name_Case_Control Samples_to_filter 

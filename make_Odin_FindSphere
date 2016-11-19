@@ -1,0 +1,8 @@
+CC=gcc
+CFLAGS= -static -O0 -c -m64 -I~/CPLEX/ibm/ILOG/CPLEX_Studio1263/cplex/include/ -mcmodel=medium
+CFLAGS_Link= -static -O0 -m64 -I~/CPLEX/ibm/ILOG/CPLEX_Studio1263/cplex/include/ -L~/CPLEX/ibm/ILOG/CPLEX_Studio1263/cplex/lib/x86-64_linux/static_pic/ -lcplex -lm -lpthread -mcmodel=medium
+
+findSphereClusters10_Odin: findSphereClusters10_Odin.o
+	$(CC) -o findSphereClusters10_Odin findSphereClusters10_Odin.o $(CFLAGS_Link)
+findSphereClusters10_Odin.o: findSphereClusters10_Odin.cpp
+	$(CC) $(CFLAGS) findSphereClusters10_Odin.cpp
